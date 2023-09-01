@@ -1,0 +1,119 @@
+/* Apply general styles to the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the survey form container */
+#survey-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(
+    180deg,
+    #dcecff,
+    #b4d2e6
+  ); /* Subtle blue gradient */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style the radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style the submit button */
+#submit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+/* Style the header */
+#title {
+  text-align: center;
+  color: #333;
+}
+
+/* Style the description */
+#description {
+  text-align: center;
+  color: #666;
+}
+
+/* Add spacing between fieldsets */
+fieldset {
+  margin-bottom: 15px;
+}
+
+/* Style the error messages */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: #ff4d4d;
+}
+
+/* Style the radio buttons and checkboxes labels */
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Style the radio buttons and checkboxes labels */
+legend {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Add space between checkbox and its label */
+label input[type="checkbox"] + span {
+  margin-left: 5px;
+}
+
+/* Style the error messages */
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-color: #ff4d4d;
+}
+
+/* Style the comments textarea */
+textarea {
+  resize: vertical;
+}
+
+/* Clear the default margin on top of the page */
+h1 {
+  margin-top: 0;
+}
