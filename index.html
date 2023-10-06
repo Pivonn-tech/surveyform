@@ -1,47 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA4-407226241"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', 'GA4-407226241');
+</script>
+    <title>Survey Form</title>
 </head>
 <body>
-  <h1 id="title">Survey Form</h1>
-  <p id="description">Please take a moment to fill out our survey form.</p>
-  
-  <form id="survey-form">
-    <label id="name-label" for="name">Name:</label>
-    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    
-    <label id="email-label" for="email">Email:</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    
-    <label id="number-label" for="number">Age:</label>
-    <input type="number" id="number" name="number" placeholder="Enter your age" min="18" max="100" required>
-    
-    <label for="dropdown">Select an option:</label>
-    <select id="dropdown" name="dropdown">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-    </select>
-    
-    <fieldset>
-      <legend>Radio buttons:</legend>
-      <label><input type="radio" name="radio-group" value="radio1"> Radio 1</label>
-      <label><input type="radio" name="radio-group" value="radio2"> Radio 2</label>
-    </fieldset>
-    
-    <fieldset>
-      <legend>Checkboxes:</legend>
-      <label><input type="checkbox" name="checkbox-group" value="checkbox1"> Checkbox 1</label>
-      <label><input type="checkbox" name="checkbox-group" value="checkbox2"> Checkbox 2</label>
-    </fieldset>
-    
-    <label for="comments">Additional Comments:</label>
-    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments"></textarea>
-    
-    <input type="submit" id="submit" value="Submit">
-  </form>
+    <div class="container">
+        <header>
+            <h1 class="title">Customer Satisfaction Survey</h1>
+            <p class="description">We value your feedback. Please take a moment to fill out our survey.</p>
+        </header>
+
+        <main>
+            <form id="survey-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <fieldset>
+                    <legend>How often do you visit our website?</legend>
+                    <label><input type="radio" name="frequency" value="daily"> Daily</label>
+                    <label><input type="radio" name="frequency" value="weekly"> Weekly</label>
+                    <label><input type="radio" name="frequency" value="monthly"> Monthly</label>
+                    <label><input type="radio" name="frequency" value="rarely"> Rarely</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Which features do you find most useful on our website? (Select all that apply)</legend>
+                    <label><input type="checkbox" name="features" value="articles"> Articles</label>
+                    <label><input type="checkbox" name="features" value="videos"> Videos</label>
+                    <label><input type="checkbox" name="features" value="forums"> Forums</label>
+                    <label><input type="checkbox" name="features" value="events"> Events</label>
+                </fieldset>
+                
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments"></textarea>
+                
+                <button type="submit" id="submit">Submit</button>
+            </form>
+
+            <div id="thank-you-message" style="display: none;">
+                <h2>Thank you for completing the survey!</h2>
+                <p>Your feedback is important to us.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Pivon</p>
+        </footer>
+    </div>
 </body>
 </html>
